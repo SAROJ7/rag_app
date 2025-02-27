@@ -72,3 +72,5 @@ pnpm-lock.yaml
 
 .env
 ./qdrant_data
+
+/play
