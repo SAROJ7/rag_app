@@ -1,5 +1,5 @@
 import { ConfigService } from '@nestjs/config';
-import { EmbeddingModelConfig, EmbeddingModels } from './types';
+import { EmbeddingModelConfig, EmbeddingModels } from '../types';
 import { OpenAIEmbeddings } from '@langchain/openai';
 import { HuggingFaceInferenceEmbeddings } from '@langchain/community/embeddings/hf';
 import { Embeddings } from '@langchain/core/embeddings';
