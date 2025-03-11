@@ -1,0 +1,1 @@
+export const VECTOR_STORE_TYPE = 'VECTOR_STORE_TYPE';
