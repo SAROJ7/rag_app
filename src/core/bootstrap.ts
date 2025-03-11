@@ -37,9 +37,8 @@ export class Bootstrap {
   setupGlobalPipe() {
     this.app.useGlobalPipes(validateconfig);
   }
-
   async startApp() {
-    const port = this.configService.get<number>('PORT') ?? 5501;
+    const port = this.configService.get<number>('port') || 5503;
     await this.app.listen(port);
     this.logger.log(
       `🚀 Application is running on: http://localhost:${port}/${this.globalPrefix}`,
