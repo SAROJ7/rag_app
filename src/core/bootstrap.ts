@@ -4,6 +4,7 @@ import { NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import * as express from 'express';
+import helmet from 'helmet';
 import { AppModule } from 'src/app.module';
 import { validateconfig } from 'src/configs/validate.config';
 
@@ -26,6 +27,7 @@ export class Bootstrap {
   setupMiddleware() {
     this.app.useBodyParser('json', { limit: '1000kb' });
     this.app.use(express.urlencoded({ extended: false }));
+    this.app.use(helmet());
     //To Do
     //Compression
   }
