@@ -14,5 +14,7 @@ export function createVectorDatabase(
     return new QdrantVectorDBService(configService);
   }
 
-  throw new InternalServerErrorException(`Invalid vector store type: ${type}`);
+  throw new InternalServerErrorException(
+    `Invalid vector store type: ${type as string}`,
+  );
 }
