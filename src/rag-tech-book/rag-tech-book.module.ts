@@ -5,7 +5,7 @@ import { OpenaiModule } from 'src/openai/openai.module';
 import { VectorStoreModule } from 'src/vector-store/vector-store.module';
 
 @Module({
-  imports: [OpenaiModule, VectorStoreModule.register('OPEN_AI', 'MEMORY')],
+  imports: [OpenaiModule, VectorStoreModule.register('OPEN_AI', 'QDRANT')],
   controllers: [RagTechBookController],
   providers: [RagTechBookService],
 })

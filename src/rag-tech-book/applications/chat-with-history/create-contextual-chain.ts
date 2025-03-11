@@ -1,8 +1,8 @@
 import { ChatOpenAI } from '@langchain/openai';
 import { contextualizeQPrompt } from '../constants/prompts.constant';
-import { StringOutputParser } from '@langchain/core/dist/output_parsers';
+import { StringOutputParser } from '@langchain/core/output_parsers';
 
-export function createContextualChain(llm: ChatOpenAI) {
+export function createContextualQuestion(llm: ChatOpenAI) {
   const contextualizeQChain = contextualizeQPrompt
     .pipe(llm)
     .pipe(new StringOutputParser());
